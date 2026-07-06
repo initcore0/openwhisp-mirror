@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://openwhisp.app/sitemap.xml
