@@ -40,4 +40,8 @@
     <loc>https://openwhisp.app/blog/human-in-the-loop-for-a-swarm-of-agents/</loc>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://openwhisp.app/blog/local-ai-is-enough-for-dictation/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
