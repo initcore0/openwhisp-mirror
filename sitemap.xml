@@ -5,6 +5,10 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://openwhisp.app/changelog/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://openwhisp.app/blog/</loc>
     <changefreq>monthly</changefreq>
   </url>
