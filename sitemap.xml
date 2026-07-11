@@ -48,4 +48,20 @@
     <loc>https://openwhisp.app/blog/local-ai-is-enough-for-dictation/</loc>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://openwhisp.app/blog/dictate-anywhere-mac-scratchpad/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://openwhisp.app/blog/hands-free-dictation-mac/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://openwhisp.app/blog/transcribe-audio-video-files-mac/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://openwhisp.app/blog/automate-dictation-shortcuts-webhooks/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>

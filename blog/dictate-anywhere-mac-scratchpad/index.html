@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Dictate anywhere on your Mac — even with no text field to type into</title>
+    <meta name="description" content="Most dictation needs a focused text field. OpenWhisp's floating Scratchpad gives you an always-on-top note to talk into anytime — a quick, fully-local capture surface." />
+    <link rel="canonical" href="https://openwhisp.app/blog/dictate-anywhere-mac-scratchpad/" />
+    <meta name="theme-color" content="#0B0E14" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="OpenWhisp" />
+    <meta property="og:title" content="Dictate anywhere on your Mac — even with no text field to type into" />
+    <meta property="og:description" content="Most dictation needs a focused text field. OpenWhisp's floating Scratchpad gives you an always-on-top note to talk into anytime — a quick, fully-local capture surface." />
+    <meta property="og:url" content="https://openwhisp.app/blog/dictate-anywhere-mac-scratchpad/" />
+    <meta property="og:image" content="https://openwhisp.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="OpenWhisp — a glowing waveform over the words 'Speak. It's typed. Nothing leaves your Mac.'" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Dictate anywhere on your Mac — even with no text field to type into" />
+    <meta name="twitter:description" content="Most dictation needs a focused text field. OpenWhisp's floating Scratchpad gives you an always-on-top note to talk into anytime — a quick, fully-local capture surface." />
+    <meta name="twitter:image" content="https://openwhisp.app/og-image.png" />
+    <meta name="twitter:image:alt" content="OpenWhisp — a glowing waveform over the words 'Speak. It's typed. Nothing leaves your Mac.'" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+    <!-- Self-hosted variable fonts: no third-party connections, no render-blocking
+         stylesheet. Declared inline (relative to the page URL) so they resolve under
+         any base path, and preloaded so text paints in the right face immediately. -->
+    <link rel="preload" href="fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <style>
+      @font-face {
+        font-family: "Space Grotesk";
+        font-style: normal;
+        font-weight: 300 700;
+        font-display: swap;
+        src: url("fonts/space-grotesk-latin.woff2") format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "JetBrains Mono";
+        font-style: normal;
+        font-weight: 100 800;
+        font-display: swap;
+        src: url("fonts/jetbrains-mono-latin.woff2") format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://openwhisp.app/#app",
+          "name": "OpenWhisp",
+          "description": "Local-first dictation for macOS. Hold a key, speak, release — your words are transcribed on-device and typed into any app.",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "macOS 14.0 or later, Apple Silicon",
+          "url": "https://openwhisp.app/",
+          "downloadUrl": "https://github.com/initcore0/openwhisp/releases/latest",
+          "softwareVersion": "1.0.0",
+          "license": "https://github.com/initcore0/openwhisp/blob/main/LICENSE",
+          "sameAs": "https://github.com/initcore0/openwhisp",
+          "isAccessibleForFree": true,
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+          "image": "https://openwhisp.app/og-image.png",
+          "featureList": [
+            "On-device speech-to-text with WhisperKit on the Apple Neural Engine",
+            "Voice editing of selected text in any app",
+            "Built-in offline AI refinement",
+            "Custom vocabulary and per-app modes",
+            "Searchable local transcription history",
+            "Twelve languages with auto-detection"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://openwhisp.app/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Does my audio ever leave my Mac?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Transcription runs entirely on your Mac and works offline. Audio is never uploaded, and the recording is deleted after each transcription. The only time any text leaves your machine is if you explicitly choose the optional OpenAI provider for AI cleanup."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does OpenWhisp cost?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nothing. OpenWhisp is free and open source under the MIT license — no account, no subscription, no usage meter."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What are the system requirements?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "An Apple Silicon Mac (M1 or newer) running macOS 14 Sonoma or later."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How is it different from the built-in macOS dictation?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "OpenWhisp runs Whisper-class models for noticeably better accuracy, and adds things macOS dictation doesn't have: voice editing of selected text, AI refinement that runs offline, custom vocabulary, per-app modes, and a searchable local history."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I install OpenWhisp?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Download the DMG, drag OpenWhisp to your Applications folder, and open it. The build is signed and notarized by Apple, so it launches with a double-click — no Gatekeeper prompts. You can also build it yourself from source."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    <script type="module" crossorigin src="/openwhisp-mirror/assets/index-Bs0kAGZz.js"></script>
+    <link rel="stylesheet" crossorigin href="/openwhisp-mirror/assets/index-DSNt1rB-.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://openwhisp.app/blog/dictate-anywhere-mac-scratchpad/#article","headline":"Dictate anywhere on your Mac — even with no text field to type into","description":"Most dictation needs a focused text field. OpenWhisp's floating Scratchpad gives you an always-on-top note to talk into anytime — a quick, fully-local capture surface.","datePublished":"2026-07-10","dateModified":"2026-07-10","url":"https://openwhisp.app/blog/dictate-anywhere-mac-scratchpad/","image":"https://openwhisp.app/og-image.png","author":{"@type":"Organization","name":"OpenWhisp","url":"https://openwhisp.app"},"publisher":{"@type":"Organization","name":"OpenWhisp","url":"https://openwhisp.app"},"mainEntityOfPage":"https://openwhisp.app/blog/dictate-anywhere-mac-scratchpad/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://openwhisp.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://openwhisp.app/blog/"},{"@type":"ListItem","position":3,"name":"Dictate anywhere on your Mac — even with no text field to type into","item":"https://openwhisp.app/blog/dictate-anywhere-mac-scratchpad/"}]},{"@type":"FAQPage","@id":"https://openwhisp.app/blog/dictate-anywhere-mac-scratchpad/#faq","mainEntity":[{"@type":"Question","name":"Can I dictate on a Mac without a text field focused?","acceptedAnswer":{"@type":"Answer","text":"Yes. OpenWhisp's floating Scratchpad is an always-on-top note panel you can open from the menu bar (or the openwhisp://scratchpad URL) and dictate into anytime, even when no other app has a text field focused."}},{"@type":"Question","name":"Where are Scratchpad notes stored?","acceptedAnswer":{"@type":"Answer","text":"On your Mac. The Scratchpad keeps a local list of notes that persist between launches; nothing is uploaded to any server."}},{"@type":"Question","name":"Can I open the Scratchpad with a shortcut?","acceptedAnswer":{"@type":"Answer","text":"Yes. It responds to the openwhisp://scratchpad URL, so you can trigger it from Raycast, Alfred, or any launcher and bind that to a hotkey."}}]}]}</script>
+</head>
+  <body>
+    <div id="root"><header class="sticky top-0 z-50 border-b border-line bg-ink/80 backdrop-blur-md backdrop-saturate-150"><div class="mx-auto flex h-16 max-w-[1180px] items-center justify-between px-6"><a href="/openwhisp-mirror/" class="flex items-center gap-2.5 text-listen" aria-label="OpenWhisp home"><svg viewBox="0 0 40 40" class="h-6 w-6 text-speak" aria-hidden="true" fill="currentColor"><rect x="5" y="17" width="3" height="6" rx="1.5"></rect><rect x="11" y="13" width="3" height="14" rx="1.5"></rect><rect x="17" y="8" width="3" height="24" rx="1.5"></rect><rect x="23" y="11" width="3" height="18" rx="1.5"></rect><rect x="29" y="15" width="3" height="10" rx="1.5"></rect><rect x="35" y="18" width="2.5" height="4" rx="1.25"></rect></svg><span class="font-display text-lg font-semibold tracking-tight">OpenWhisp</span></a><nav class="hidden items-center gap-7 text-sm font-medium text-muted-d md:flex" aria-label="Primary"><a class="transition-colors hover:text-listen" href="/openwhisp-mirror/#features">Features</a><a class="transition-colors hover:text-listen" href="/openwhisp-mirror/changelog/">Changelog</a><a class="transition-colors hover:text-listen" href="/openwhisp-mirror/blog/">Blog</a><a class="transition-colors hover:text-listen" href="https://github.com/initcore0/openwhisp" rel="noopener">GitHub</a><a class="group inline-flex items-center gap-1.5 text-refine/80 transition-colors hover:text-refine" href="https://buymeacoffee.com/initcore0" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="h-4 w-4 transition-transform group-hover:scale-110"><path d="M240,102c0,70-103.79,126.66-108.21,129a8,8,0,0,1-7.58,0C119.79,228.66,16,172,16,102A62.07,62.07,0,0,1,78,40c20.65,0,38.73,8.88,50,23.89C139.27,48.88,157.35,40,178,40A62.07,62.07,0,0,1,240,102Z"></path></svg>Support</a></nav><button type="button" aria-expanded="false" aria-controls="blog-mobile-menu" aria-label="Open menu" class="-mr-1 inline-flex h-10 w-10 items-center justify-center rounded-lg text-listen transition-colors hover:bg-ink-2 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="h-5 w-5"><path d="M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128ZM40,76H216a12,12,0,0,0,0-24H40a12,12,0,0,0,0,24ZM216,180H40a12,12,0,0,0,0,24H216a12,12,0,0,0,0-24Z"></path></svg></button></div><div id="blog-mobile-menu" class="border-t border-line md:hidden hidden"><nav class="mx-auto flex max-w-[1180px] flex-col gap-1 px-4 py-4" aria-label="Mobile"><a href="/openwhisp-mirror/#features" class="rounded-lg px-3 py-3 font-display text-[15px] font-medium text-text-d transition-colors hover:bg-ink-2 hover:text-listen">Features</a><a href="/openwhisp-mirror/changelog/" class="rounded-lg px-3 py-3 font-display text-[15px] font-medium text-text-d transition-colors hover:bg-ink-2 hover:text-listen">Changelog</a><a href="/openwhisp-mirror/blog/" class="rounded-lg px-3 py-3 font-display text-[15px] font-medium text-text-d transition-colors hover:bg-ink-2 hover:text-listen">Blog</a><a href="https://github.com/initcore0/openwhisp" rel="noopener" class="rounded-lg px-3 py-3 font-display text-[15px] font-medium text-text-d transition-colors hover:bg-ink-2 hover:text-listen">GitHub</a><div class="mt-2 grid gap-2.5 border-t border-line pt-4"><a href="https://github.com/initcore0/openwhisp/releases/latest/download/OpenWhisp.dmg" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-lg bg-speak px-4 py-3 font-display text-[15px] font-semibold text-[#04181a]"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="h-4 w-4"><path d="M228,144v64a12,12,0,0,1-12,12H40a12,12,0,0,1-12-12V144a12,12,0,0,1,24,0v52H204V144a12,12,0,0,1,24,0Zm-108.49,8.49a12,12,0,0,0,17,0l40-40a12,12,0,0,0-17-17L140,115V32a12,12,0,0,0-24,0v83L96.49,95.51a12,12,0,0,0-17,17Z"></path></svg> Download for macOS</a><a href="https://buymeacoffee.com/initcore0" rel="noopener" class="inline-flex items-center justify-center gap-2 rounded-lg border border-refine/40 px-4 py-3 font-display text-[15px] font-semibold text-refine transition-colors hover:bg-refine/10"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="h-4 w-4"><path d="M240,102c0,70-103.79,126.66-108.21,129a8,8,0,0,1-7.58,0C119.79,228.66,16,172,16,102A62.07,62.07,0,0,1,78,40c20.65,0,38.73,8.88,50,23.89C139.27,48.88,157.35,40,178,40A62.07,62.07,0,0,1,240,102Z"></path></svg> Support</a></div></nav></div></header><main><article class="mx-auto max-w-[720px] px-6 py-14 md:py-20"><a href="/openwhisp-mirror/blog/" class="inline-flex items-center gap-1.5 font-mono text-xs text-muted-d hover:text-listen"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="h-3.5 w-3.5"><path d="M228,128a12,12,0,0,1-12,12H69l51.52,51.51a12,12,0,0,1-17,17l-72-72a12,12,0,0,1,0-17l72-72a12,12,0,0,1,17,17L69,116H216A12,12,0,0,1,228,128Z"></path></svg> All posts</a><div class="mt-6 flex items-center gap-3 font-mono text-xs text-muted-d"><time dateTime="2026-07-10">July 10, 2026</time><span class="text-line">|</span><span>4 min read</span></div><h1 class="mt-3 font-display text-3xl font-bold leading-tight tracking-tight text-listen md:text-[2.6rem]">Dictate anywhere on your Mac — even with no text field to type into</h1><p class="mt-6 rounded-2xl border border-speak/25 bg-speak/[0.05] p-5 text-[17px] leading-relaxed text-text-d">OpenWhisp&#x27;s floating Scratchpad lets you dictate on a Mac even when no app has a text field focused. Open it from the menu bar (or the openwhisp://scratchpad URL), and an always-on-top panel appears to talk or type into. It holds a list of notes, saves them on-device, and never sends anything to the cloud.</p><div class="prose-body"><p class="mt-5 leading-relaxed text-text-d">Dictation apps have a blind spot: they need somewhere to put the words. If no text field is focused — you’re staring at your desktop, a full-screen video, a Finder window — there’s nowhere for the transcript to go. The thought you wanted to capture waits until you find an app to type into, and by then it’s often gone.</p><p class="mt-5 leading-relaxed text-text-d">OpenWhisp’s <strong>floating Scratchpad</strong> fixes that. It’s a small, always-on-top note panel you can summon anytime and talk straight into — no target app required.</p><h2 class="mt-12 font-display text-2xl font-semibold tracking-tight text-listen md:text-3xl">How it works</h2><ul class="mt-5 grid list-disc gap-2 pl-5 leading-relaxed text-text-d marker:text-speak"><li>Open the Scratchpad from the OpenWhisp menu-bar icon (or run <code class="font-mono text-[0.9em] text-speak">open &quot;openwhisp://scratchpad&quot;</code> from a launcher).</li><li>The panel floats on top of your other windows and takes focus.</li><li>Start a dictation with your trigger key — the text appends into the active note. Or just type.</li><li>Keep several notes in a list; each shows a small provenance line (when it was last dictated vs. typed), newest first.</li></ul><h2 class="mt-12 font-display text-2xl font-semibold tracking-tight text-listen md:text-3xl">A capture surface, kept on your Mac</h2><p class="mt-5 leading-relaxed text-text-d">The Scratchpad is a quick-capture buffer, not a cloud notes service. Your notes are saved on device and persist between launches, and nothing leaves your Mac — the same<!-- --> <a href="/openwhisp-mirror/blog/private-on-device-ai-dictation/" rel="noopener" class="border-b border-speak/40 text-speak transition-colors hover:border-speak">local-first, private</a> posture as the rest of OpenWhisp. It’s the fastest way to get a fleeting thought out of your head and into text when there’s no document open to hold it.</p><h2 class="mt-12 font-display text-2xl font-semibold tracking-tight text-listen md:text-3xl">Where it fits</h2><p class="mt-5 leading-relaxed text-text-d">Think of it as the voice equivalent of a sticky note: a fleeting to-do while you’re heads-down in a call, a quote you want to keep while reading, a reminder mid-task. When you’re ready, copy it into wherever it belongs. And because you can open it from a URL, you can bind it to a<!-- --> <a href="/openwhisp-mirror/blog/automate-dictation-shortcuts-webhooks/" rel="noopener" class="border-b border-speak/40 text-speak transition-colors hover:border-speak">launcher hotkey</a> and have a capture note one keystroke away.</p></div><section class="mt-14"><h2 class="font-display text-2xl font-semibold tracking-tight text-listen">Frequently asked questions</h2><dl class="mt-6 grid gap-5"><div class="rounded-2xl border border-line bg-ink-2 p-5"><dt class="font-display text-[17px] font-semibold text-listen">Can I dictate on a Mac without a text field focused?</dt><dd class="mt-2 leading-relaxed text-muted-d">Yes. OpenWhisp&#x27;s floating Scratchpad is an always-on-top note panel you can open from the menu bar (or the openwhisp://scratchpad URL) and dictate into anytime, even when no other app has a text field focused.</dd></div><div class="rounded-2xl border border-line bg-ink-2 p-5"><dt class="font-display text-[17px] font-semibold text-listen">Where are Scratchpad notes stored?</dt><dd class="mt-2 leading-relaxed text-muted-d">On your Mac. The Scratchpad keeps a local list of notes that persist between launches; nothing is uploaded to any server.</dd></div><div class="rounded-2xl border border-line bg-ink-2 p-5"><dt class="font-display text-[17px] font-semibold text-listen">Can I open the Scratchpad with a shortcut?</dt><dd class="mt-2 leading-relaxed text-muted-d">Yes. It responds to the openwhisp://scratchpad URL, so you can trigger it from Raycast, Alfred, or any launcher and bind that to a hotkey.</dd></div></dl></section><div class="mt-14 rounded-2xl border border-speak/25 bg-speak/[0.05] p-7 text-center"><p class="font-display text-xl font-semibold text-listen">Try OpenWhisp</p><p class="mx-auto mt-2 max-w-[46ch] text-[15px] leading-relaxed text-muted-d">Free, open source, and 100% on-device dictation for Apple Silicon Macs.</p><div class="mt-5 flex flex-wrap justify-center gap-3"><a href="https://github.com/initcore0/openwhisp/releases/latest/download/OpenWhisp.dmg" class="inline-flex items-center justify-center rounded-[10px] bg-speak px-5 py-2.5 font-display text-sm font-semibold text-[#04181a] transition-all hover:shadow-[0_0_24px_-2px_color-mix(in_srgb,var(--color-speak)_55%,transparent)] active:scale-[0.98]">Download for macOS</a><a href="/openwhisp-mirror/" class="inline-flex items-center justify-center rounded-[10px] border border-line px-5 py-2.5 font-display text-sm font-semibold text-text-d transition-all hover:border-muted-d hover:bg-ink-2">See all features</a></div></div><section class="mt-14"><h2 class="font-display text-lg font-semibold text-listen">Keep reading</h2><ul class="mt-4 grid gap-3"><li><a href="/openwhisp-mirror/blog/hands-free-dictation-mac/" class="group flex items-center justify-between gap-3 rounded-xl border border-line bg-ink-2 p-4 transition-colors hover:border-muted-d"><span class="font-display text-[15px] font-semibold text-listen">Hands-free dictation on a Mac: talk without holding a key</span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="h-4 w-4 shrink-0 text-speak transition-transform group-hover:translate-x-0.5"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"></path></svg></a></li><li><a href="/openwhisp-mirror/blog/automate-dictation-shortcuts-webhooks/" class="group flex items-center justify-between gap-3 rounded-xl border border-line bg-ink-2 p-4 transition-colors hover:border-muted-d"><span class="font-display text-[15px] font-semibold text-listen">Automate your dictation: run Shortcuts, webhooks, and files when you finish speaking</span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="h-4 w-4 shrink-0 text-speak transition-transform group-hover:translate-x-0.5"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"></path></svg></a></li><li><a href="/openwhisp-mirror/blog/private-on-device-ai-dictation/" class="group flex items-center justify-between gap-3 rounded-xl border border-line bg-ink-2 p-4 transition-colors hover:border-muted-d"><span class="font-display text-[15px] font-semibold text-listen">Private, on-device AI dictation with no cloud</span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="h-4 w-4 shrink-0 text-speak transition-transform group-hover:translate-x-0.5"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"></path></svg></a></li></ul></section></article></main><footer class="border-t border-line py-10"><div class="mx-auto flex max-w-[1180px] flex-wrap items-center gap-x-8 gap-y-4 px-6"><div class="flex items-center gap-2.5 font-display font-semibold text-listen"><svg viewBox="0 0 40 40" class="h-5 w-5 text-speak" aria-hidden="true" fill="currentColor"><rect x="5" y="17" width="3" height="6" rx="1.5"></rect><rect x="11" y="13" width="3" height="14" rx="1.5"></rect><rect x="17" y="8" width="3" height="24" rx="1.5"></rect><rect x="23" y="11" width="3" height="18" rx="1.5"></rect><rect x="29" y="15" width="3" height="10" rx="1.5"></rect><rect x="35" y="18" width="2.5" height="4" rx="1.25"></rect></svg>OpenWhisp</div><nav class="flex gap-6 text-sm text-muted-d" aria-label="Footer"><a class="hover:text-listen" href="/openwhisp-mirror/">Home</a><a class="hover:text-listen" href="/openwhisp-mirror/changelog/">Changelog</a><a class="hover:text-listen" href="/openwhisp-mirror/blog/">Blog</a><a class="hover:text-listen" href="https://github.com/initcore0/openwhisp" rel="noopener">GitHub</a><a class="inline-flex items-center gap-1.5 hover:text-refine" href="https://buymeacoffee.com/initcore0" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256" class="hidden"><path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"></path></svg>Support</a></nav><p class="ml-auto text-[13px] text-muted-d">Free &amp; open source · MIT licensed.</p></div></footer></div>
+  </body>
+</html>
