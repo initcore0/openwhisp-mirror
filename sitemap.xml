@@ -64,4 +64,8 @@
     <loc>https://openwhisp.app/blog/automate-dictation-shortcuts-webhooks/</loc>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://openwhisp.app/blog/parakeet-realtime-streaming-dictation-mac/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
