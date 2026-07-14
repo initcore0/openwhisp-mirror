@@ -65,7 +65,7 @@
           "@type": "SoftwareApplication",
           "@id": "https://openwhisp.app/#app",
           "name": "OpenWhisp",
-          "description": "Local-first dictation for macOS. Hold a key, speak, release — your words are transcribed on-device and typed into any app.",
+          "description": "Realtime dictation for macOS that runs entirely on your device. Words appear as you speak, about 0.3s behind your voice, and it doubles as a local MCP server so AI coding agents can use your voice.",
           "applicationCategory": "UtilitiesApplication",
           "operatingSystem": "macOS 14.0 or later, Apple Silicon",
           "url": "https://openwhisp.app/",
@@ -77,12 +77,12 @@
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
           "image": "https://openwhisp.app/og-image.png",
           "featureList": [
-            "On-device speech-to-text with WhisperKit on the Apple Neural Engine",
+            "Realtime on-device speech-to-text — words appear about 0.3s behind your voice",
+            "Built-in MCP server so AI coding agents like Claude Code and Cursor can use your voice",
             "Voice editing of selected text in any app",
             "Built-in offline AI refinement",
             "Custom vocabulary and per-app modes",
-            "Searchable local transcription history",
-            "Twelve languages with auto-detection"
+            "Searchable local transcription history"
           ]
         },
         {
@@ -118,7 +118,15 @@
               "name": "How is it different from the built-in macOS dictation?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "OpenWhisp runs Whisper-class models for noticeably better accuracy, and adds things macOS dictation doesn't have: voice editing of selected text, AI refinement that runs offline, custom vocabulary, per-app modes, and a searchable local history."
+                "text": "OpenWhisp streams words in about 0.3 seconds behind your voice, already punctuated, and adds things macOS dictation doesn't have: voice editing of selected text, AI refinement that runs offline, custom vocabulary, per-app modes, a searchable local history, and a built-in MCP server so AI coding agents can use your voice."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can AI coding agents like Claude Code use OpenWhisp?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. OpenWhisp doubles as a local MCP server, so Claude Code, Cursor, and any MCP-aware agent can ask you questions out loud and take your spoken answer, rewrite text with your on-device model, and read your recent dictations. It works with any API key or Bedrock setup, over SSH, and in regulated environments, because nothing is ever sent to the cloud. It is off until you enable it, and you approve each agent and each capability."
               }
             },
             {
@@ -134,8 +142,8 @@
       ]
     }
     </script>
-    <script type="module" crossorigin src="/openwhisp-mirror/assets/index-DsVRUSM0.js"></script>
-    <link rel="stylesheet" crossorigin href="/openwhisp-mirror/assets/index-DKRAqRGk.css">
+    <script type="module" crossorigin src="/openwhisp-mirror/assets/index-YAUgJF54.js"></script>
+    <link rel="stylesheet" crossorigin href="/openwhisp-mirror/assets/index-DdtDK2Bo.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://openwhisp.app/blog/edit-text-by-voice-mac/#article","headline":"How to edit text by voice on a Mac (not just dictate)","description":"Most dictation apps only type new text. OpenWhisp lets you select text in any Mac app, double-tap, and rewrite it by voice — edited in place, on-device.","datePublished":"2026-07-02","dateModified":"2026-07-02","url":"https://openwhisp.app/blog/edit-text-by-voice-mac/","image":"https://openwhisp.app/og-image.png","author":{"@type":"Organization","name":"OpenWhisp","url":"https://openwhisp.app"},"publisher":{"@type":"Organization","name":"OpenWhisp","url":"https://openwhisp.app"},"mainEntityOfPage":"https://openwhisp.app/blog/edit-text-by-voice-mac/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://openwhisp.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://openwhisp.app/blog/"},{"@type":"ListItem","position":3,"name":"How to edit text by voice on a Mac (not just dictate)","item":"https://openwhisp.app/blog/edit-text-by-voice-mac/"}]},{"@type":"FAQPage","@id":"https://openwhisp.app/blog/edit-text-by-voice-mac/#faq","mainEntity":[{"@type":"Question","name":"Can I edit existing text by voice on a Mac?","acceptedAnswer":{"@type":"Answer","text":"Yes. OpenWhisp lets you select text in any app, double-tap its hotkey, and speak an instruction; the selected text is rewritten in place by an AI model."}},{"@type":"Question","name":"Does voice editing send my text to the cloud?","acceptedAnswer":{"@type":"Answer","text":"Not unless you choose to. OpenWhisp can run the rewrite on a built-in offline model on your own Mac, on your own server, or on OpenAI — your choice."}},{"@type":"Question","name":"Is my clipboard affected when I edit text by voice?","acceptedAnswer":{"@type":"Answer","text":"No. The selection is read via the macOS Accessibility API, so your clipboard is left untouched, and secure or password fields are never read."}}]}]}</script>
 </head>
   <body>
