@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>OpenWhisp blog</title>
+  <subtitle>Guides and honest comparisons on dictating and editing text by voice on a Mac — on-device, private, and free.</subtitle>
+  <link href="https://openwhisp.app/feed.xml" rel="self"/>
+  <link href="https://openwhisp.app/blog/"/>
+  <id>https://openwhisp.app/blog/</id>
+  <updated>2026-07-18T00:00:00Z</updated>
+  <author><name>OpenWhisp</name></author>
+  <entry>
+    <title>Per-app dictation tone on a Mac: casual in Slack, formal in Mail, verbatim in your terminal</title>
+    <link href="https://openwhisp.app/blog/per-app-refine-tone-mac/"/>
+    <id>https://openwhisp.app/blog/per-app-refine-tone-mac/</id>
+    <published>2026-07-18T00:00:00Z</published>
+    <updated>2026-07-18T00:00:00Z</updated>
+    <summary>OpenWhisp can set how AI cleanup reshapes your dictation per app — casual in Slack, formal in Mail, and verbatim in code editors and terminals. Wispr Flow's best-loved feature, done on-device.</summary>
+  </entry>
+  <entry>
+    <title>Parakeet: real-time streaming dictation on a Mac (words ~0.3s behind your voice)</title>
+    <link href="https://openwhisp.app/blog/parakeet-realtime-streaming-dictation-mac/"/>
+    <id>https://openwhisp.app/blog/parakeet-realtime-streaming-dictation-mac/</id>
+    <published>2026-07-11T00:00:00Z</published>
+    <updated>2026-07-14T00:00:00Z</updated>
+    <summary>OpenWhisp's new on-device Parakeet engine streams words to the screen about 0.3s behind your voice, with live punctuation — final text lands ~50ms after you release the key. Fully local, no cloud.</summary>
+  </entry>
+  <entry>
+    <title>Dictate anywhere on your Mac — even with no text field to type into</title>
+    <link href="https://openwhisp.app/blog/dictate-anywhere-mac-scratchpad/"/>
+    <id>https://openwhisp.app/blog/dictate-anywhere-mac-scratchpad/</id>
+    <published>2026-07-10T00:00:00Z</published>
+    <updated>2026-07-10T00:00:00Z</updated>
+    <summary>Most dictation needs a focused text field. OpenWhisp's floating Scratchpad gives you an always-on-top note to talk into anytime — a quick, fully-local capture surface.</summary>
+  </entry>
+  <entry>
+    <title>Hands-free dictation on a Mac: talk without holding a key</title>
+    <link href="https://openwhisp.app/blog/hands-free-dictation-mac/"/>
+    <id>https://openwhisp.app/blog/hands-free-dictation-mac/</id>
+    <published>2026-07-10T00:00:00Z</published>
+    <updated>2026-07-10T00:00:00Z</updated>
+    <summary>Tired of holding a key while you dictate? OpenWhisp's hands-free mode locks the mic open with one tap — speak with your hands free, tap or Esc to stop. On-device, with a silence safety net.</summary>
+  </entry>
+  <entry>
+    <title>Transcribe audio and video files locally on your Mac (with SRT/VTT subtitles)</title>
+    <link href="https://openwhisp.app/blog/transcribe-audio-video-files-mac/"/>
+    <id>https://openwhisp.app/blog/transcribe-audio-video-files-mac/</id>
+    <published>2026-07-10T00:00:00Z</published>
+    <updated>2026-07-10T00:00:00Z</updated>
+    <summary>Drop an MP3 or MP4 into OpenWhisp and get a transcript — or .srt/.vtt subtitles — generated entirely on your Mac. Batch queue, automatic chunking, and watch folders. No upload, no cloud.</summary>
+  </entry>
+  <entry>
+    <title>Automate your dictation: run Shortcuts, webhooks, and files when you finish speaking</title>
+    <link href="https://openwhisp.app/blog/automate-dictation-shortcuts-webhooks/"/>
+    <id>https://openwhisp.app/blog/automate-dictation-shortcuts-webhooks/</id>
+    <published>2026-07-10T00:00:00Z</published>
+    <updated>2026-07-10T00:00:00Z</updated>
+    <summary>OpenWhisp can do something the moment a dictation finishes — append to a file, run a Shortcut, POST a webhook, open a URL. Plus an openwhisp:// scheme to drive it from Raycast or Alfred. Fail-open, on-device.</summary>
+  </entry>
+  <entry>
+    <title>You don't need a giant AI model for dictation — your Mac is enough</title>
+    <link href="https://openwhisp.app/blog/local-ai-is-enough-for-dictation/"/>
+    <id>https://openwhisp.app/blog/local-ai-is-enough-for-dictation/</id>
+    <published>2026-07-06T00:00:00Z</published>
+    <updated>2026-07-06T00:00:00Z</updated>
+    <summary>Dictation cleanup is a small, well-scoped task, so a tiny local model handles it fine. And because OpenWhisp is open source with a bundled llama.cpp, you can point it at a self-hosted Qwen3 32B if you want more.</summary>
+  </entry>
+  <entry>
+    <title>The human in the loop for a swarm of agents</title>
+    <link href="https://openwhisp.app/blog/human-in-the-loop-for-a-swarm-of-agents/"/>
+    <id>https://openwhisp.app/blog/human-in-the-loop-for-a-swarm-of-agents/</id>
+    <published>2026-07-05T00:00:00Z</published>
+    <updated>2026-07-05T00:00:00Z</updated>
+    <summary>As people run many coding agents at once, the bottleneck becomes human attention. Here's why OpenWhisp could become the place a swarm of agents reaches you — a thesis, not a shipped feature.</summary>
+  </entry>
+  <entry>
+    <title>Talk to Claude Code by voice: OpenWhisp is now an MCP server</title>
+    <link href="https://openwhisp.app/blog/talk-to-claude-code-by-voice/"/>
+    <id>https://openwhisp.app/blog/talk-to-claude-code-by-voice/</id>
+    <published>2026-07-04T00:00:00Z</published>
+    <updated>2026-07-04T00:00:00Z</updated>
+    <summary>OpenWhisp's Agent Bridge turns it into a local MCP server: Claude Code, Cursor, and other coding agents can ask you questions by voice — fully on-device.</summary>
+  </entry>
+  <entry>
+    <title>The best local &amp; private dictation apps for Mac (2026)</title>
+    <link href="https://openwhisp.app/blog/best-mac-dictation-apps/"/>
+    <id>https://openwhisp.app/blog/best-mac-dictation-apps/</id>
+    <published>2026-07-03T00:00:00Z</published>
+    <updated>2026-07-03T00:00:00Z</updated>
+    <summary>A practical guide to Mac dictation apps in 2026 — local vs cloud, free vs paid, and which to pick if privacy or price matters most.</summary>
+  </entry>
+  <entry>
+    <title>OpenWhisp vs Superwhisper: a free, open-source alternative</title>
+    <link href="https://openwhisp.app/blog/superwhisper-alternative/"/>
+    <id>https://openwhisp.app/blog/superwhisper-alternative/</id>
+    <published>2026-07-03T00:00:00Z</published>
+    <updated>2026-07-03T00:00:00Z</updated>
+    <summary>Comparing OpenWhisp and Superwhisper for Mac dictation — free and open source vs paid and closed, both fully on-device. An honest look.</summary>
+  </entry>
+  <entry>
+    <title>How to dictate on a Mac completely offline</title>
+    <link href="https://openwhisp.app/blog/dictate-on-mac-offline/"/>
+    <id>https://openwhisp.app/blog/dictate-on-mac-offline/</id>
+    <published>2026-07-03T00:00:00Z</published>
+    <updated>2026-07-03T00:00:00Z</updated>
+    <summary>You can dictate on a Mac with no internet at all. Here's how on-device transcription works and how to set up fully offline voice typing.</summary>
+  </entry>
+  <entry>
+    <title>Private, on-device AI dictation with no cloud</title>
+    <link href="https://openwhisp.app/blog/private-on-device-ai-dictation/"/>
+    <id>https://openwhisp.app/blog/private-on-device-ai-dictation/</id>
+    <published>2026-07-03T00:00:00Z</published>
+    <updated>2026-07-03T00:00:00Z</updated>
+    <summary>Dictate and refine text with AI that runs entirely on your Mac. No account, no server, no audio or text sent to the cloud — here's how.</summary>
+  </entry>
+  <entry>
+    <title>OpenWhisp: a free, local Wispr Flow alternative for Mac</title>
+    <link href="https://openwhisp.app/blog/wispr-flow-alternative/"/>
+    <id>https://openwhisp.app/blog/wispr-flow-alternative/</id>
+    <published>2026-07-02T00:00:00Z</published>
+    <updated>2026-07-02T00:00:00Z</updated>
+    <summary>Looking for a Wispr Flow alternative? OpenWhisp is a free, open-source Mac dictation app that runs entirely on-device — no subscription, no cloud.</summary>
+  </entry>
+  <entry>
+    <title>How to edit text by voice on a Mac (not just dictate)</title>
+    <link href="https://openwhisp.app/blog/edit-text-by-voice-mac/"/>
+    <id>https://openwhisp.app/blog/edit-text-by-voice-mac/</id>
+    <published>2026-07-02T00:00:00Z</published>
+    <updated>2026-07-02T00:00:00Z</updated>
+    <summary>Most dictation apps only type new text. OpenWhisp lets you select text in any Mac app, double-tap, and rewrite it by voice — edited in place, on-device.</summary>
+  </entry>
+</feed>
