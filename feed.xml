@@ -5,8 +5,16 @@
   <link href="https://openwhisp.app/feed.xml" rel="self"/>
   <link href="https://openwhisp.app/blog/"/>
   <id>https://openwhisp.app/blog/</id>
-  <updated>2026-07-18T00:00:00Z</updated>
+  <updated>2026-07-23T00:00:00Z</updated>
   <author><name>OpenWhisp</name></author>
+  <entry>
+    <title>Live captions for OBS and Twitch, generated on your own Mac</title>
+    <link href="https://openwhisp.app/blog/live-captions-obs-twitch-mac/"/>
+    <id>https://openwhisp.app/blog/live-captions-obs-twitch-mac/</id>
+    <published>2026-07-23T00:00:00Z</published>
+    <updated>2026-07-23T00:00:00Z</updated>
+    <summary>Add live subtitles to your stream without a captioning service. OpenWhisp serves a caption page from your Mac — drop it into OBS as a Browser source. Free, local, and it can translate as you speak.</summary>
+  </entry>
   <entry>
     <title>Per-app dictation tone on a Mac: casual in Slack, formal in Mail, verbatim in your terminal</title>
     <link href="https://openwhisp.app/blog/per-app-refine-tone-mac/"/>
