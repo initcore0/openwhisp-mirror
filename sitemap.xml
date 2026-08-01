@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://openwhisp.app/</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-01</lastmod>
   </url>
   <url>
     <loc>https://openwhisp.app/changelog/</loc>
@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://openwhisp.app/blog/</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-01</lastmod>
   </url>
   <url>
     <loc>https://openwhisp.app/blog/wispr-flow-alternative/</loc>
@@ -75,5 +75,9 @@
   <url>
     <loc>https://openwhisp.app/blog/live-captions-obs-twitch-mac/</loc>
     <lastmod>2026-07-23</lastmod>
+  </url>
+  <url>
+    <loc>https://openwhisp.app/blog/on-device-translation-dictation-mac/</loc>
+    <lastmod>2026-08-01</lastmod>
   </url>
 </urlset>

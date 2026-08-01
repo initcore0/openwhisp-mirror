@@ -5,8 +5,16 @@
   <link href="https://openwhisp.app/feed.xml" rel="self"/>
   <link href="https://openwhisp.app/blog/"/>
   <id>https://openwhisp.app/blog/</id>
-  <updated>2026-07-23T00:00:00Z</updated>
+  <updated>2026-08-01T00:00:00Z</updated>
   <author><name>OpenWhisp</name></author>
+  <entry>
+    <title>Speak any language, type English — on-device translation with no cloud</title>
+    <link href="https://openwhisp.app/blog/on-device-translation-dictation-mac/"/>
+    <id>https://openwhisp.app/blog/on-device-translation-dictation-mac/</id>
+    <published>2026-08-01T00:00:00Z</published>
+    <updated>2026-08-01T00:00:00Z</updated>
+    <summary>OpenWhisp translates your dictation on your Mac using Apple's Translation framework. Works with every engine, shows a live preview while you speak, and never sends a word to a server.</summary>
+  </entry>
   <entry>
     <title>Live captions for OBS and Twitch, generated on your own Mac</title>
     <link href="https://openwhisp.app/blog/live-captions-obs-twitch-mac/"/>
