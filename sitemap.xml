@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://openwhisp.app/blog/</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-04</lastmod>
   </url>
   <url>
     <loc>https://openwhisp.app/blog/wispr-flow-alternative/</loc>
@@ -79,5 +79,9 @@
   <url>
     <loc>https://openwhisp.app/blog/on-device-translation-dictation-mac/</loc>
     <lastmod>2026-08-01</lastmod>
+  </url>
+  <url>
+    <loc>https://openwhisp.app/blog/openwhisp-plugins-local-control-plane/</loc>
+    <lastmod>2026-08-04</lastmod>
   </url>
 </urlset>
