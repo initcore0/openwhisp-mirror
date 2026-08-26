@@ -64,6 +64,28 @@
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "Organization",
+          "@id": "https://openwhisp.app/#org",
+          "name": "OpenWhisp",
+          "alternateName": ["OpenWhisp App", "OpenWhisp dictation", "Open Whisp"],
+          "url": "https://openwhisp.app/",
+          "logo": "https://openwhisp.app/apple-touch-icon.png",
+          "description": "OpenWhisp is a free, open-source realtime dictation app for macOS that runs entirely on-device.",
+          "sameAs": [
+            "https://github.com/initcore0/openwhisp",
+            "https://github.com/initcore0/openwhisp-site"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://openwhisp.app/#website",
+          "name": "OpenWhisp",
+          "alternateName": "OpenWhisp — local dictation for macOS",
+          "url": "https://openwhisp.app/",
+          "inLanguage": "en",
+          "publisher": { "@id": "https://openwhisp.app/#org" }
+        },
+        {
           "@type": "SoftwareApplication",
           "@id": "https://openwhisp.app/#app",
           "name": "OpenWhisp",
@@ -72,7 +94,11 @@
           "operatingSystem": "macOS 15.0 or later, Apple Silicon",
           "url": "https://openwhisp.app/",
           "downloadUrl": "https://github.com/initcore0/openwhisp/releases/latest",
-          "softwareVersion": "1.0.0",
+          "softwareVersion": "1.1.2",
+          "author": { "@id": "https://openwhisp.app/#org" },
+          "publisher": { "@id": "https://openwhisp.app/#org" },
+          "applicationSubCategory": "Speech recognition, dictation, transcription",
+          "softwareRequirements": "macOS 15 or later, Apple Silicon",
           "license": "https://github.com/initcore0/openwhisp/blob/main/LICENSE",
           "sameAs": "https://github.com/initcore0/openwhisp",
           "isAccessibleForFree": true,
@@ -97,6 +123,14 @@
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "No. Transcription runs entirely on your Mac and works offline. Audio is never uploaded, and the recording is deleted after each transcription. The only time any text leaves your machine is if you explicitly choose the optional OpenAI provider for AI cleanup."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is OpenWhisp the same as OpenWISP?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No \u2014 they are different projects with similar names. OpenWISP (spelled with an i) is a network management system for wifi and IoT networks. OpenWhisp (spelled with an h, as in whisper) is a free, open-source realtime dictation app for macOS that runs entirely on your device."
               }
             },
             {
@@ -152,8 +186,8 @@
       ]
     }
     </script>
-    <script type="module" crossorigin src="/openwhisp-mirror/assets/index-YhS42h2e.js"></script>
-    <link rel="stylesheet" crossorigin href="/openwhisp-mirror/assets/index-CC0DKy_I.css">
+    <script type="module" crossorigin src="/openwhisp-mirror/assets/index-Bpk7xlvR.js"></script>
+    <link rel="stylesheet" crossorigin href="/openwhisp-mirror/assets/index-WhG2RD1S.css">
   <meta property="article:published_time" content="2026-08-01" />
 <meta property="article:modified_time" content="2026-08-01" />
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://openwhisp.app/blog/on-device-translation-dictation-mac/#article","headline":"Speak any language, type English — on-device translation with no cloud","description":"OpenWhisp translates your dictation on your Mac using Apple's Translation framework. Works with every engine, shows a live preview while you speak, and never sends a word to a server.","datePublished":"2026-08-01","dateModified":"2026-08-01","url":"https://openwhisp.app/blog/on-device-translation-dictation-mac/","image":"https://openwhisp.app/og-image.png","author":{"@type":"Organization","name":"OpenWhisp","url":"https://openwhisp.app"},"publisher":{"@type":"Organization","name":"OpenWhisp","url":"https://openwhisp.app"},"mainEntityOfPage":"https://openwhisp.app/blog/on-device-translation-dictation-mac/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://openwhisp.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://openwhisp.app/blog/"},{"@type":"ListItem","position":3,"name":"Speak any language, type English — on-device translation with no cloud","item":"https://openwhisp.app/blog/on-device-translation-dictation-mac/"}]},{"@type":"FAQPage","@id":"https://openwhisp.app/blog/on-device-translation-dictation-mac/#faq","mainEntity":[{"@type":"Question","name":"Does OpenWhisp translate dictation without the internet?","acceptedAnswer":{"@type":"Answer","text":"Yes. Translation runs on your Mac using Apple's Translation framework. You download a language pair once (a few minutes), and after that translation works offline — nothing is sent to a server."}},{"@type":"Question","name":"Which transcription engines support translation?","acceptedAnswer":{"@type":"Answer","text":"All of them. Translation is applied to the transcribed text rather than performed by the speech engine, so it works with Parakeet (the default), WhisperKit, whisper.cpp, Apple Speech, and SpeechAnalyzer alike. You no longer have to switch engines to translate."}},{"@type":"Question","name":"Can I see the translation while I'm still speaking?","acceptedAnswer":{"@type":"Answer","text":"Yes, with the experimental live translation preview. The dictation overlay shows a running English translation as you talk, with your spoken words on a dimmed line above it. It's off by default, and it's display-only — the text that gets pasted comes from the normal translation path."}},{"@type":"Question","name":"What happens if the translation fails or the language pack isn't installed?","acceptedAnswer":{"@type":"Answer","text":"You get your original words. OpenWhisp's rule is that a failed translation inserts the untranslated transcript rather than losing your dictation."}},{"@type":"Question","name":"What macOS version do I need for on-device translation?","acceptedAnswer":{"@type":"Answer","text":"macOS 15 (Sequoia) or later, which is also OpenWhisp's minimum supported version. The on-device translation framework it relies on is part of macOS 15."}}]}]}</script>

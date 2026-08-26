@@ -64,6 +64,28 @@
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "Organization",
+          "@id": "https://openwhisp.app/#org",
+          "name": "OpenWhisp",
+          "alternateName": ["OpenWhisp App", "OpenWhisp dictation", "Open Whisp"],
+          "url": "https://openwhisp.app/",
+          "logo": "https://openwhisp.app/apple-touch-icon.png",
+          "description": "OpenWhisp is a free, open-source realtime dictation app for macOS that runs entirely on-device.",
+          "sameAs": [
+            "https://github.com/initcore0/openwhisp",
+            "https://github.com/initcore0/openwhisp-site"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://openwhisp.app/#website",
+          "name": "OpenWhisp",
+          "alternateName": "OpenWhisp — local dictation for macOS",
+          "url": "https://openwhisp.app/",
+          "inLanguage": "en",
+          "publisher": { "@id": "https://openwhisp.app/#org" }
+        },
+        {
           "@type": "SoftwareApplication",
           "@id": "https://openwhisp.app/#app",
           "name": "OpenWhisp",
@@ -72,7 +94,11 @@
           "operatingSystem": "macOS 15.0 or later, Apple Silicon",
           "url": "https://openwhisp.app/",
           "downloadUrl": "https://github.com/initcore0/openwhisp/releases/latest",
-          "softwareVersion": "1.0.0",
+          "softwareVersion": "1.1.2",
+          "author": { "@id": "https://openwhisp.app/#org" },
+          "publisher": { "@id": "https://openwhisp.app/#org" },
+          "applicationSubCategory": "Speech recognition, dictation, transcription",
+          "softwareRequirements": "macOS 15 or later, Apple Silicon",
           "license": "https://github.com/initcore0/openwhisp/blob/main/LICENSE",
           "sameAs": "https://github.com/initcore0/openwhisp",
           "isAccessibleForFree": true,
@@ -97,6 +123,14 @@
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "No. Transcription runs entirely on your Mac and works offline. Audio is never uploaded, and the recording is deleted after each transcription. The only time any text leaves your machine is if you explicitly choose the optional OpenAI provider for AI cleanup."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is OpenWhisp the same as OpenWISP?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No \u2014 they are different projects with similar names. OpenWISP (spelled with an i) is a network management system for wifi and IoT networks. OpenWhisp (spelled with an h, as in whisper) is a free, open-source realtime dictation app for macOS that runs entirely on your device."
               }
             },
             {
@@ -152,8 +186,8 @@
       ]
     }
     </script>
-    <script type="module" crossorigin src="/openwhisp-mirror/assets/index-YhS42h2e.js"></script>
-    <link rel="stylesheet" crossorigin href="/openwhisp-mirror/assets/index-CC0DKy_I.css">
+    <script type="module" crossorigin src="/openwhisp-mirror/assets/index-Bpk7xlvR.js"></script>
+    <link rel="stylesheet" crossorigin href="/openwhisp-mirror/assets/index-WhG2RD1S.css">
   <meta property="article:published_time" content="2026-07-05" />
 <meta property="article:modified_time" content="2026-07-05" />
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://openwhisp.app/blog/human-in-the-loop-for-a-swarm-of-agents/#article","headline":"The human in the loop for a swarm of agents","description":"As people run many coding agents at once, the bottleneck becomes human attention. Here's why OpenWhisp could become the place a swarm of agents reaches you — a thesis, not a shipped feature.","datePublished":"2026-07-05","dateModified":"2026-07-05","url":"https://openwhisp.app/blog/human-in-the-loop-for-a-swarm-of-agents/","image":"https://openwhisp.app/og-image.png","author":{"@type":"Organization","name":"OpenWhisp","url":"https://openwhisp.app"},"publisher":{"@type":"Organization","name":"OpenWhisp","url":"https://openwhisp.app"},"mainEntityOfPage":"https://openwhisp.app/blog/human-in-the-loop-for-a-swarm-of-agents/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://openwhisp.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://openwhisp.app/blog/"},{"@type":"ListItem","position":3,"name":"The human in the loop for a swarm of agents","item":"https://openwhisp.app/blog/human-in-the-loop-for-a-swarm-of-agents/"}]},{"@type":"FAQPage","@id":"https://openwhisp.app/blog/human-in-the-loop-for-a-swarm-of-agents/#faq","mainEntity":[{"@type":"Question","name":"Is OpenWhisp a message bus for AI agents?","acceptedAnswer":{"@type":"Answer","text":"No — and this post argues it shouldn't be. A bus routes messages between agents, which would break the per-agent isolation that makes a local agent bridge trustworthy. The thesis is the opposite: OpenWhisp should be the endpoint where agents reach the human (a star topology), not the wire agents use to reach each other."}},{"@type":"Question","name":"Does OpenWhisp support multiple agents at once today?","acceptedAnswer":{"@type":"Answer","text":"This post is a vision piece, not a feature announcement. What ships today is the Agent Bridge, where a single coding agent can ask you a question by voice. The multi-agent 'swarm queues for your attention' ideas described here are unbuilt directions, not current features."}},{"@type":"Question","name":"Why is human attention the bottleneck in multi-agent work?","acceptedAnswer":{"@type":"Answer","text":"Each agent runs fast on its own, but every one of them stops and waits for you whenever it needs a decision. Adding more agents doesn't add throughput — it adds to the queue at a single checkout lane: you. So the limiting resource becomes human attention, which is an attention problem before it's a coordination problem."}}]}]}</script>

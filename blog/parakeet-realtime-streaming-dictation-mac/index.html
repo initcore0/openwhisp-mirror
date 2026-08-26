@@ -64,6 +64,28 @@
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "Organization",
+          "@id": "https://openwhisp.app/#org",
+          "name": "OpenWhisp",
+          "alternateName": ["OpenWhisp App", "OpenWhisp dictation", "Open Whisp"],
+          "url": "https://openwhisp.app/",
+          "logo": "https://openwhisp.app/apple-touch-icon.png",
+          "description": "OpenWhisp is a free, open-source realtime dictation app for macOS that runs entirely on-device.",
+          "sameAs": [
+            "https://github.com/initcore0/openwhisp",
+            "https://github.com/initcore0/openwhisp-site"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://openwhisp.app/#website",
+          "name": "OpenWhisp",
+          "alternateName": "OpenWhisp — local dictation for macOS",
+          "url": "https://openwhisp.app/",
+          "inLanguage": "en",
+          "publisher": { "@id": "https://openwhisp.app/#org" }
+        },
+        {
           "@type": "SoftwareApplication",
           "@id": "https://openwhisp.app/#app",
           "name": "OpenWhisp",
@@ -72,7 +94,11 @@
           "operatingSystem": "macOS 15.0 or later, Apple Silicon",
           "url": "https://openwhisp.app/",
           "downloadUrl": "https://github.com/initcore0/openwhisp/releases/latest",
-          "softwareVersion": "1.0.0",
+          "softwareVersion": "1.1.2",
+          "author": { "@id": "https://openwhisp.app/#org" },
+          "publisher": { "@id": "https://openwhisp.app/#org" },
+          "applicationSubCategory": "Speech recognition, dictation, transcription",
+          "softwareRequirements": "macOS 15 or later, Apple Silicon",
           "license": "https://github.com/initcore0/openwhisp/blob/main/LICENSE",
           "sameAs": "https://github.com/initcore0/openwhisp",
           "isAccessibleForFree": true,
@@ -97,6 +123,14 @@
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "No. Transcription runs entirely on your Mac and works offline. Audio is never uploaded, and the recording is deleted after each transcription. The only time any text leaves your machine is if you explicitly choose the optional OpenAI provider for AI cleanup."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is OpenWhisp the same as OpenWISP?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No \u2014 they are different projects with similar names. OpenWISP (spelled with an i) is a network management system for wifi and IoT networks. OpenWhisp (spelled with an h, as in whisper) is a free, open-source realtime dictation app for macOS that runs entirely on your device."
               }
             },
             {
@@ -152,8 +186,8 @@
       ]
     }
     </script>
-    <script type="module" crossorigin src="/openwhisp-mirror/assets/index-YhS42h2e.js"></script>
-    <link rel="stylesheet" crossorigin href="/openwhisp-mirror/assets/index-CC0DKy_I.css">
+    <script type="module" crossorigin src="/openwhisp-mirror/assets/index-Bpk7xlvR.js"></script>
+    <link rel="stylesheet" crossorigin href="/openwhisp-mirror/assets/index-WhG2RD1S.css">
   <meta property="article:published_time" content="2026-07-11" />
 <meta property="article:modified_time" content="2026-07-14" />
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://openwhisp.app/blog/parakeet-realtime-streaming-dictation-mac/#article","headline":"Parakeet: real-time streaming dictation on a Mac (words ~0.3s behind your voice)","description":"OpenWhisp's new on-device Parakeet engine streams words to the screen about 0.3s behind your voice, with live punctuation — final text lands ~50ms after you release the key. Fully local, no cloud.","datePublished":"2026-07-11","dateModified":"2026-07-14","url":"https://openwhisp.app/blog/parakeet-realtime-streaming-dictation-mac/","image":"https://openwhisp.app/og-image.png","author":{"@type":"Organization","name":"OpenWhisp","url":"https://openwhisp.app"},"publisher":{"@type":"Organization","name":"OpenWhisp","url":"https://openwhisp.app"},"mainEntityOfPage":"https://openwhisp.app/blog/parakeet-realtime-streaming-dictation-mac/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://openwhisp.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://openwhisp.app/blog/"},{"@type":"ListItem","position":3,"name":"Parakeet: real-time streaming dictation on a Mac (words ~0.3s behind your voice)","item":"https://openwhisp.app/blog/parakeet-realtime-streaming-dictation-mac/"}]},{"@type":"FAQPage","@id":"https://openwhisp.app/blog/parakeet-realtime-streaming-dictation-mac/#faq","mainEntity":[{"@type":"Question","name":"What is Parakeet in OpenWhisp?","acceptedAnswer":{"@type":"Answer","text":"Parakeet is a new on-device transcription engine for OpenWhisp built on NVIDIA Parakeet models via the Apache-2.0 FluidAudio SDK. Unlike the batch engines, it streams: text appears about 0.3 seconds behind your voice with punctuation, and the final result lands roughly 50ms after you release the hotkey."}},{"@type":"Question","name":"Is Parakeet the default engine now?","acceptedAnswer":{"@type":"Answer","text":"Yes. Parakeet is the default, recommended transcription engine — a fresh install uses it from the first launch. Existing users keep whatever engine they'd already chosen. You can switch anytime in Settings › Models, where WhisperKit, whisper.cpp, and Apple Speech remain available."}},{"@type":"Question","name":"What languages does Parakeet support?","acceptedAnswer":{"@type":"Answer","text":"For live dictation there's an English realtime model, a best-accuracy English model, an ultra-light 120M model, and a multilingual model covering roughly 40 languages with auto-detect. File transcription, meetings, and history re-transcription use a separate 25-language batch model. The Parakeet models only transcribe, but you can still translate to English — OpenWhisp translates the transcribed text on-device with Apple's Translation framework (macOS 15+)."}},{"@type":"Question","name":"Does Parakeet run in the cloud?","acceptedAnswer":{"@type":"Answer","text":"No. Parakeet runs entirely on your Mac through CoreML, so nothing is uploaded. Its model repositories appear in Settings › Storage with sizes and one-click delete."}}]}]}</script>

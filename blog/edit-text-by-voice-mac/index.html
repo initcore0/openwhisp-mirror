@@ -64,6 +64,28 @@
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "Organization",
+          "@id": "https://openwhisp.app/#org",
+          "name": "OpenWhisp",
+          "alternateName": ["OpenWhisp App", "OpenWhisp dictation", "Open Whisp"],
+          "url": "https://openwhisp.app/",
+          "logo": "https://openwhisp.app/apple-touch-icon.png",
+          "description": "OpenWhisp is a free, open-source realtime dictation app for macOS that runs entirely on-device.",
+          "sameAs": [
+            "https://github.com/initcore0/openwhisp",
+            "https://github.com/initcore0/openwhisp-site"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://openwhisp.app/#website",
+          "name": "OpenWhisp",
+          "alternateName": "OpenWhisp — local dictation for macOS",
+          "url": "https://openwhisp.app/",
+          "inLanguage": "en",
+          "publisher": { "@id": "https://openwhisp.app/#org" }
+        },
+        {
           "@type": "SoftwareApplication",
           "@id": "https://openwhisp.app/#app",
           "name": "OpenWhisp",
@@ -72,7 +94,11 @@
           "operatingSystem": "macOS 15.0 or later, Apple Silicon",
           "url": "https://openwhisp.app/",
           "downloadUrl": "https://github.com/initcore0/openwhisp/releases/latest",
-          "softwareVersion": "1.0.0",
+          "softwareVersion": "1.1.2",
+          "author": { "@id": "https://openwhisp.app/#org" },
+          "publisher": { "@id": "https://openwhisp.app/#org" },
+          "applicationSubCategory": "Speech recognition, dictation, transcription",
+          "softwareRequirements": "macOS 15 or later, Apple Silicon",
           "license": "https://github.com/initcore0/openwhisp/blob/main/LICENSE",
           "sameAs": "https://github.com/initcore0/openwhisp",
           "isAccessibleForFree": true,
@@ -97,6 +123,14 @@
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "No. Transcription runs entirely on your Mac and works offline. Audio is never uploaded, and the recording is deleted after each transcription. The only time any text leaves your machine is if you explicitly choose the optional OpenAI provider for AI cleanup."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is OpenWhisp the same as OpenWISP?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No \u2014 they are different projects with similar names. OpenWISP (spelled with an i) is a network management system for wifi and IoT networks. OpenWhisp (spelled with an h, as in whisper) is a free, open-source realtime dictation app for macOS that runs entirely on your device."
               }
             },
             {
@@ -152,8 +186,8 @@
       ]
     }
     </script>
-    <script type="module" crossorigin src="/openwhisp-mirror/assets/index-YhS42h2e.js"></script>
-    <link rel="stylesheet" crossorigin href="/openwhisp-mirror/assets/index-CC0DKy_I.css">
+    <script type="module" crossorigin src="/openwhisp-mirror/assets/index-Bpk7xlvR.js"></script>
+    <link rel="stylesheet" crossorigin href="/openwhisp-mirror/assets/index-WhG2RD1S.css">
   <meta property="article:published_time" content="2026-07-02" />
 <meta property="article:modified_time" content="2026-07-02" />
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BlogPosting","@id":"https://openwhisp.app/blog/edit-text-by-voice-mac/#article","headline":"How to edit text by voice on a Mac (not just dictate)","description":"Most dictation apps only type new text. OpenWhisp lets you select text in any Mac app, double-tap, and rewrite it by voice — edited in place, on-device.","datePublished":"2026-07-02","dateModified":"2026-07-02","url":"https://openwhisp.app/blog/edit-text-by-voice-mac/","image":"https://openwhisp.app/og-image.png","author":{"@type":"Organization","name":"OpenWhisp","url":"https://openwhisp.app"},"publisher":{"@type":"Organization","name":"OpenWhisp","url":"https://openwhisp.app"},"mainEntityOfPage":"https://openwhisp.app/blog/edit-text-by-voice-mac/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://openwhisp.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://openwhisp.app/blog/"},{"@type":"ListItem","position":3,"name":"How to edit text by voice on a Mac (not just dictate)","item":"https://openwhisp.app/blog/edit-text-by-voice-mac/"}]},{"@type":"FAQPage","@id":"https://openwhisp.app/blog/edit-text-by-voice-mac/#faq","mainEntity":[{"@type":"Question","name":"Can I edit existing text by voice on a Mac?","acceptedAnswer":{"@type":"Answer","text":"Yes. OpenWhisp lets you select text in any app, double-tap its hotkey, and speak an instruction; the selected text is rewritten in place by an AI model."}},{"@type":"Question","name":"Does voice editing send my text to the cloud?","acceptedAnswer":{"@type":"Answer","text":"Not unless you choose to. OpenWhisp can run the rewrite on a built-in offline model on your own Mac, on your own server, or on OpenAI — your choice."}},{"@type":"Question","name":"Is my clipboard affected when I edit text by voice?","acceptedAnswer":{"@type":"Answer","text":"No. The selection is read via the macOS Accessibility API, so your clipboard is left untouched, and secure or password fields are never read."}}]}]}</script>
